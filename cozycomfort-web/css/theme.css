@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Cozy Comfort - Light & Dark Theme Configuration
+   ========================================================================== */
+
+/* Theme Variables */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --text-muted: #6c757d;
+    --heading-color: #2c3e50;
+    --border-color: #dee2e6;
+    --nav-bg: #ffffff;
+    --footer-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    
+    --primary-color: #8d5b4c; /* Cozy Warm Bronze/Brown */
+    --primary-hover: #724638;
+    --hero-gradient: linear-gradient(135deg, #8d5b4c 0%, #4a2c22 100%);
+    --accent-color: #d4a373;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --text-muted: #a0a0a0;
+    --heading-color: #ffffff;
+    --border-color: #333333;
+    --nav-bg: #1e1e1e;
+    --footer-bg: #1e1e1e;
+    --input-bg: #2d2d2d;
+    --input-border: #444444;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+    --hero-gradient: linear-gradient(135deg, #4a2c22 0%, #1e1e1e 100%);
+    --accent-color: #c99363;
+}
+
+/* Base Theme Mappings */
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Nav & Sidebar Styles */
+.navbar {
+    background: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar a, .nav-brand a {
+    color: var(--text-color) !important;
+}
+
+.brand-text {
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+}
+
+.nav-link:hover, .nav-links li a:hover {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--nav-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.dropdown-menu a {
+    color: var(--text-color) !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bg-color) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Sidebar for Admin Panels */
+.sidebar, .admin-sidebar {
+    background-color: var(--nav-bg) !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+.sidebar a, .admin-sidebar a {
+    color: var(--text-color) !important;
+}
+
+.sidebar a:hover, .sidebar a.active, .admin-sidebar a:hover, .admin-sidebar a.active {
+    background-color: var(--bg-color) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Cards & Layout Containers */
+.card, .product-card, .featured-products, .features-grid .feature-card, .category-tile {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-section {
+    background: var(--hero-gradient) !important;
+}
+
+.hero-section::before {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Forms, Modals & Inputs */
+.form-container, .form-box, .login-container, .checkout-container, .modal-content, .cart-summary {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+    color: var(--text-color) !important;
+}
+
+.form-group label, label {
+    color: var(--text-color) !important;
+}
+
+.form-control, input, select, textarea {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--input-border) !important;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-control:focus, input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px rgba(141, 91, 76, 0.25) !important;
+    outline: none !important;
+}
+
+/* Tables & Admin Layouts */
+table, .table {
+    background: var(--card-bg) !important;
+    color: var(--text-color) !important;
+}
+
+th {
+    background-color: var(--bg-color) !important;
+    color: var(--heading-color) !important;
+    border-bottom: 2px solid var(--border-color) !important;
+}
+
+td {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+tr:hover {
+    background-color: var(--bg-color) !important;
+}
+
+/* Dashboard Statistics & Analytics */
+.stat-card, .metric-card, .widget {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+    color: var(--text-color) !important;
+}
+
+.stat-card .value, .stat-value {
+    color: var(--primary-color) !important;
+}
+
+.stat-card .label, .stat-label {
+    color: var(--text-muted) !important;
+}
+
+.chart-container, .report-card, .orders-table-container, .distributors-list, .cart-table {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+    color: var(--text-color) !important;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6, .product-title {
+    color: var(--heading-color) !important;
+}
+
+p, span, li, td, th, label, dt, dd {
+    color: var(--text-color);
+}
+
+.text-muted, .help-block, .product-category, .post-meta {
+    color: var(--text-muted) !important;
+}
+
+/* Buttons */
+.btn-primary, button[type="submit"] {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover, button[type="submit"]:hover {
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}
+
+.btn-outline {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background: transparent !important;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Theme Switch Toggle Button Style */
+.theme-toggle {
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(141, 91, 76, 0.1) !important;
+}
+
+body.dark .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Footer & Details Panels */
+.footer {
+    background-color: var(--footer-bg) !important;
+    border-top: 1px solid var(--border-color) !important;
+    color: var(--text-muted) !important;
+}
+
+.footer p, .footer span {
+    color: var(--text-muted) !important;
+}
+
+.alert-info, .alert-success, .alert-warning {
+    color: #333 !important; /* Ensure readable alerts */
+}

@@ -1,0 +1,9 @@
+// 1. Kill all running instances
+Get-Process -Name "node", "dotnet", "VBCSCompiler" -ErrorAction SilentlyContinue | Stop-Process -Force
+
+// 2. Run backend (Open new terminal)
+cd backend
+dotnet run
+
+// 3. Run frontend (Open new terminal)
+cmd /c "npm run dev"
